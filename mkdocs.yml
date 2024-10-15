@@ -1,11 +1,10 @@
 site_name: Web de Lara
-site_url: https://a24pemola.github.io/a24pemola
+site_url: https://a24pemola.github.io/
+
 theme:
   name: material
 
 nav:
-  - Inicio: index.md
-  - Ejercicios:
-      - "Ejercicio 1": https://github.com/a24pemola/DespliegueWeb/blob/main/Actividad%202.1/practica2_1.md
-
-      
+  - Home: index.md
+  - DAW:
+      - Práctica 2.1: https://github.com/a24pemola/DespliegueWeb/blob/main/Actividad%202.1/practica2_1.mdº
