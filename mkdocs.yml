@@ -7,4 +7,4 @@ theme:
 nav:
   - Home: index.md
   - DAW:
-      - Práctica 2.1: https://github.com/a24pemola/DespliegueWeb/blob/main/Actividad%202.1/practica2_1.mdº
+      - Ejercicio 2.1: actividad_2.1/index.md
