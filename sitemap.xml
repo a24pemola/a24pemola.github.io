@@ -2,10 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://a24pemola.github.io/</loc>
-         <lastmod>2024-10-15</lastmod>
+         <lastmod>2024-10-17</lastmod>
     </url>
     <url>
          <loc>https://a24pemola.github.io/actividad_2.1/</loc>
-         <lastmod>2024-10-15</lastmod>
+         <lastmod>2024-10-17</lastmod>
+    </url>
+    <url>
+         <loc>https://a24pemola.github.io/actividad_2.2/</loc>
+         <lastmod>2024-10-17</lastmod>
     </url>
 </urlset>
