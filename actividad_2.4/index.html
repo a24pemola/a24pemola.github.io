@@ -8,13 +8,11 @@
       
       
       
-        <link rel="canonical" href="https://a24pemola.github.io/actividad_2.3/">
+        <link rel="canonical" href="https://a24pemola.github.io/actividad_2.4/">
       
       
-        <link rel="prev" href="../actividad_2.2/">
+        <link rel="prev" href="../actividad_2.3/">
       
-      
-        <link rel="next" href="../actividad_2.4/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -22,7 +20,7 @@
     
     
       
-        <title>Ejercicio 2.3 - Web de Lara</title>
+        <title>Ejercicio 2.4 - Web de Lara</title>
       
     
     
@@ -64,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#practica-23" class="md-skip">
+        <a href="#practica-24" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ejercicio 2.3
+              Ejercicio 2.4
             
           </span>
         </div>
@@ -289,6 +287,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../actividad_2.3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicio 2.3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -305,7 +324,7 @@
           
   
   <span class="md-ellipsis">
-    Ejercicio 2.3
+    Ejercicio 2.4
   </span>
   
 
@@ -316,7 +335,7 @@
         
   
   <span class="md-ellipsis">
-    Ejercicio 2.3
+    Ejercicio 2.4
   </span>
   
 
@@ -338,19 +357,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#proxy-inverso-con-nginx" class="md-nav__link">
+  <a href="#balanceo-de-carga-con-proxy-inverso-en-nginx" class="md-nav__link">
     <span class="md-ellipsis">
-      Proxy inverso con Nginx
+      Balanceo de carga con proxy inverso en Nginx
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Proxy inverso con Nginx">
+    <nav class="md-nav" aria-label="Balanceo de carga con proxy inverso en Nginx">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#configuraciones" class="md-nav__link">
     <span class="md-ellipsis">
       Configuraciones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nginx-servidor-web-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nginx Servidor Web 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nginx-servidor-web-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nginx Servidor Web 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nginx-proxy-inverso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nginx Proxy Inverso
     </span>
   </a>
   
@@ -370,31 +416,52 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#cuestiones-finales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cuestiones finales
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cuestiones finales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cuestion-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cuestión 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuestion-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cuestión 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuestion-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cuestión 3
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../actividad_2.4/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Ejercicio 2.4
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -434,13 +501,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#proxy-inverso-con-nginx" class="md-nav__link">
+  <a href="#balanceo-de-carga-con-proxy-inverso-en-nginx" class="md-nav__link">
     <span class="md-ellipsis">
-      Proxy inverso con Nginx
+      Balanceo de carga con proxy inverso en Nginx
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Proxy inverso con Nginx">
+    <nav class="md-nav" aria-label="Balanceo de carga con proxy inverso en Nginx">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -453,9 +520,78 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#nginx-servidor-web-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nginx Servidor Web 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nginx-servidor-web-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nginx Servidor Web 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nginx-proxy-inverso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nginx Proxy Inverso
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#comprobaciones" class="md-nav__link">
     <span class="md-ellipsis">
       Comprobaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuestiones-finales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cuestiones finales
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cuestiones finales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cuestion-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cuestión 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuestion-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cuestión 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuestion-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cuestión 3
     </span>
   </a>
   
@@ -481,129 +617,195 @@
                   
 
 
-<h1 id="practica-23">Practica 2.3</h1>
-<h2 id="proxy-inverso-con-nginx">Proxy inverso con Nginx</h2>
+<h1 id="practica-24">Practica 2.4</h1>
+<h2 id="balanceo-de-carga-con-proxy-inverso-en-nginx">Balanceo de carga con proxy inverso en Nginx</h2>
 <h3 id="configuraciones">Configuraciones</h3>
-<p><strong>Nginx servidor web</strong></p>
-<p>Vamos a clonar nuestra primera máquina de Debian para poder tener dos, siguiendo estas pautas:</p>
-<ul>
-<li>Uno servirá para la web que ya hemos montado en la práctica anterior (Actividad 2.1).</li>
-<li>La nueva máquina clonada se usará para el proxy inverso.</li>
-<li>Realizaremos las peticiones HTTP desde el navegador de nuestra máquina física/anfitrión al proxy clonado, que luego redirigirá al servidor web original.</li>
-</ul>
-<pre><code>¡OJO! Al clonar las máquinas virtuales porque hay que darle a crear una nueva MAC, de lo contrario no tendréis IP en esa máquina.
+<pre><code>¡OJO! Como detalle a tener en cuenta, deberemos desactivar los sitios web de las tareas anteriores para que no den problemas.
+
+Dentro de la carpeta `/etc/nginx/sites-enabled` debemos ejecutar `unlink nombre_archivo` para cada uno de los archivos de los sitios web que tenemos.
 </code></pre>
-<p><img alt="Foto 1" src="../assets/images/practica%202.3/s1.png" /></p>
-<p><img alt="Foto 2" src="../assets/images/practica%202.3/s2.png" /></p>
-<p>Para diferenciarlo mejor, vamos a modificar los servidores para que cada uno haga la petición desde un puerto diferente.</p>
-<ol>
-<li>
-<p>Primero, vamos a cambiar el nombre antiguo del servidor web original por el de <code>webserver</code>, y eso implica:</p>
-</li>
-<li>
-<p>Cambiar el nombre del archivo de configuración de sitios disponibles para Nginx.</p>
-</li>
-<li>
-<p>Cambiar el nombre del sitio web dentro de este archivo de configuración donde haga falta.</p>
-</li>
-</ol>
-<p><img alt="Foto 5" src="../assets/images/practica%202.3/s5.png" /></p>
-<ul>
-<li>No os olvidéis de eliminar el link simbólico antiguo con el comando <code>unlink nombre_del_link</code> dentro de la carpeta <code>sites-enabled</code> y crear el nuevo para el nuevo nombre de archivo.</li>
-</ul>
-<p><img alt="Foto 4" src="../assets/images/practica%202.3/s4.png" /></p>
-<p><img alt="Foto 6" src="../assets/images/practica%202.3/s6.png" /></p>
-<p><img alt="Foto 7" src="../assets/images/practica%202.3/s7.png" /></p>
-<ol>
-<li>En el archivo de configuración del sitio web, en lugar de hacer que el servidor escuche en el puerto 80, cambiadlo al 8080.</li>
-</ol>
-<p><img alt="Foto 3" src="../assets/images/practica%202.3/s3.png" /></p>
-<ol>
-<li>Reiniciamos Nginx.</li>
-</ol>
-<p><img alt="Foto 8" src="../assets/images/practica%202.3/s8.png" /></p>
-<p><strong>Nginx proxy inverso</strong></p>
-<p>Ahora, cuando intentamos acceder a <code>http://ejemplo-proxy</code> (o el nombre que tuvieráis de vuestra web de las prácticas anteriores), en realidad estaremos accediendo al proxy, que nos redirigirá a <code>http://webserver:8080</code>, el servidor web que acabamos de configurar para que escuche con ese nombre en el puerto 8080. Pero para ello debemos seguir los siguientes pasos:</p>
+<p><img alt="Foto 1" src="../assets/images/practica%202.4/s1.png" /></p>
+<h3 id="nginx-servidor-web-1">Nginx Servidor Web 1</h3>
+<p>Debemos configurar este servidor web para que sirva el siguiente <code>index.html</code> que debéis crear dentro de la carpeta <code>/var/www/webserver1/html</code>:</p>
+<p><img alt="Foto 2" src="../assets/images/practica%202.4/s2.png" /></p>
 <ul>
 <li>
-<p>Crear un archivo de configuración en sites-available con el nombre ejemplo-proxy (o el que tuvieráis vosotros).</p>
+<p>El nombre del sitio web que se debe utilizar en los archivos (sites-available, etc) para Nginx es <code>webserver1</code>, igual que en el resto de configuraciones.</p>
 </li>
 <li>
-<p>Este archivo de configuración será más simple, tendrá la siguiente forma.</p>
+<p>El sitio web debe escuchar al puerto 8080.</p>
+</li>
+<li>
+<p>Se debe añadir una cabecera que se llame <code>Serv_Web1_vuestronombre</code>.</p>
 </li>
 </ul>
-<pre><code>server { 
-    listen __; 
-    server_name ____________; 
-    location / { 
-    proxy_pass http://_________:____; 
-    } 
-} 
+<p><img alt="Foto 3" src="../assets/images/practica%202.4/s13.png" /></p>
+<h3 id="nginx-servidor-web-2">Nginx Servidor Web 2</h3>
+<p>Se debe clonar en la máquina Debian, del servidor web 1.</p>
+<p><img alt="Foto 4" src="../assets/images/practica%202.4/s5.png" /></p>
+<p>Se debe hacer una configuración idéntica, pero cambiando los nombres de <code>webserver1</code> por <code>webserver2</code> (incluído el index.html), y el nombre de la cabecera será <code>Serv_Web2_vuestronombre</code>.</p>
+<pre><code>¡OJO! Es importante que no quede ninguna referencia al webserver1, o podría haber problemas.
 </code></pre>
-<p>Donde, mirando el diagrama de red y teniendo en cuenta la configuración hecha hasta ahora, debéis completar:</p>
+<h3 id="nginx-proxy-inverso">Nginx Proxy Inverso</h3>
+<p>Ya que tenemos los servidores web, lo que nos quedará es configurar el proxy inverso.</p>
+<ul>
+<li>En sites-available vamos a crear el archivo de configuración con el nombre <code>balanceo</code>.</li>
+</ul>
+<p>Y el archivo tendrá el siguiente formato:</p>
+<pre><code>    upstream backend_hosts {
+                random;
+                server ________:____;
+                server ________:____;
+    }
+            server {
+                listen 80;
+                server_name ________;      
+                location / {
+                    proxy_pass http://backend_hosts;
+                }
+            }
+</code></pre>
 <ul>
 <li>
-<p>El puerto donde está escuchando el proxy inverso</p>
+<p>El bloque upstream → son los servidores entre los que se va a repartir la carga, que son los dos que hemos configurado anteriormente.</p>
 </li>
 <li>
-<p>El nombre de vuestro dominio o sitio web original al que accedemos en el proxy</p>
+<p>Si miráis el diagrama y tenéis en cuenta la configuración que habéis hecho hasta ahora, aquí deberéis colocar la IP de cada servidor, así como el puerto donde está escuchando las peticiones web.</p>
 </li>
 <li>
-<p>La directiva <code>proxy_pass</code> indica a dónde se van a redirigir las peticiones, esto es, al servidor web. Por tanto, debéis poner la IP y número de puerto adecuados de vuestro sitio web configurado en el apartado anterior.</p>
+<p>A este grupo de servidores le ponemos un nombre, que es <code>backend_hosts</code>.</p>
 </li>
 <li>
-<p>Crear el link simbólico pertinente</p>
+<p>Pondremos random porque es lo más fácil para comprobar que todo funciona bien en la práctica, pero hay diferentes formas de repartir la carga (las peticiones HTTP). </p>
 </li>
 </ul>
-<p><img alt="Foto 9" src="../assets/images/practica%202.3/s9.png" /></p>
-<p><img alt="Foto 10" src="../assets/images/practica%202.3/s10.png" /></p>
-<p><strong>¡OJO!</strong> En mi caso en concreto he tenido que poner el link en el <code>proxy_pass</code> sin el <code>8080</code> al final, de otra manera no me llegaba a funcionar.</p>
-<pre><code>Debéis modificar el archivo host que configurastéis en la práctica 2.1. Si miráis el diagrama de red, ahora el nombre de vuestro sitio web se corresponderá con la IP de la nueva máquina clon que hace de proxy. Será ésta la encargada de redirigirnos automáticamente al verdadero sitio web.
-</code></pre>
-<p><img alt="Foto 11" src="../assets/images/practica%202.3/s11.png" /></p>
+<p><img alt="Foto 5" src="../assets/images/practica%202.4/s11.png" /></p>
 <h3 id="comprobaciones">Comprobaciones</h3>
-<p>Deberíais poder acceder a vuestro sitio web sin problemas.</p>
+<p>Se debería poder acceder al sitio web sin problemas, recordando que se debe desactivar el caché.</p>
+<p><img alt="Foto 6" src="../assets/images/practica%202.4/s15.png" /></p>
+<p><img alt="Foto 7" src="../assets/images/practica%202.4/s16.png" /></p>
+<p>Si refrescamos, el servidor es aleatorio, y si se desactiva el servidor 1, se irá al 2, igual que si desactivamos el servidor 2, se irá al 1.</p>
+<h2 id="cuestiones-finales">Cuestiones finales</h2>
+<h3 id="cuestion-1">Cuestión 1</h3>
+<p>Busca información de qué otros métodos de balanceo se pueden aplicar con Nginx y describe al menos 3 de ellos.</p>
 <ul>
 <li>
-<p>Comprobad en los access.log de los dos servidores que llega la petición</p>
+<p><code>Round Robin</code>: Asigna las solicitudes en un ciclo uniforme entre todos los servidores, ideal para ambientes de carga similar​.</p>
 </li>
 <li>
-<p>Comprobad además la petición y respuesta con las herramientas de desarrollador de Firefox en Xubuntu. Pulsando F12 en el navegador os aparecerán estas herramientas.</p>
+<p><code>Least Connections</code>: Redirige las solicitudes al servidor con menos conexiones activas, equilibrando cargas en sistemas con tráfico variable.</p>
+</li>
+<li>
+<p><code>IP Hash</code>: Envía solicitudes del mismo cliente al mismo servidor, manteniendo la sesión y datos consistentes, útil para aplicaciones como e-commerce.</p>
 </li>
 </ul>
-<p><img alt="Foto 12" src="../assets/images/practica%202.3/s12.png" /></p>
-<p><img alt="Foto 13" src="../assets/images/practica%202.3/s13.png" /></p>
-<p>Debéis entrar en Red &gt; luego donde se puede ver la respuesta &gt; y ver la respuesta HTTP como petición GET HTTP (200 OK).</p>
-<p>También deberían aparecer las cabeceras, de las cuales podemos añadir algunas nosotros.</p>
-<p><strong>Añadiendo cabeceras</strong></p>
-<pre><code>Es importante desactivar el caché para hacer las pruebas siguientes.
-</code></pre>
-<p>Como una manera extra de comprobar que todo va bien, podemos añadir las cabeceras de la siguiente manera:</p>
+<h3 id="cuestion-2">Cuestión 2</h3>
+<p>Si quiero añadir 2 servidores web más al balanceo de carga, describe detalladamente qué configuración habría que añadir y dónde.</p>
 <ul>
-<li>Para añadir cabeceras, en el archivo de configuración del sitio web debemos añadir dentro del bloque <code>location / { … }</code> debemos añadir la directiva: </li>
+<li>Si tenemos ya configurado, lo único que debemos hacer es añadir los servidores extra en el bloque de <code>upstream</code>.</li>
 </ul>
-<pre><code>add_header Host nombre_del_host;
+<pre><code>upstream webserverejemplo {
+    ...;
+    server &lt;host_servidor_1&gt;:&lt;puerto_servidor_1&gt;;
+    server &lt;host_servidor_2&gt;:&lt;puerto_servidor_2&gt;;
+}
 </code></pre>
-<ol>
-<li>Añadimos primero esta cabecera solo en el archivo de configuración del proxy inverso. El Nombre_del_host será Proxy_inverso_vuestronombre.</li>
-</ol>
-<p><img alt="Foto 3" src="../assets/images/practica%202.3/s3.png" /></p>
-<ol>
+<h3 id="cuestion-3">Cuestión 3</h3>
+<p>Describe todos los pasos que deberíamos seguir y configurar para realizar el balanceo de carga con una de las webs de prácticas anteriores.</p>
+<p>Indicad la configuración de todas las máquinas (webservers, proxy...) y de sus servicios.</p>
+<ul>
 <li>
-<p>Reiniciamos Nginx.</p>
+<p>Tal y como hemos hecho con este ejercicio, se deberán tener al menos 3 máquinas virtuales. El servidor web original, el servidor 2 clonado del original, y el proxy inverso.</p>
 </li>
 <li>
-<p>Comprobamos que podemos acceder al sitio web sin problemas.</p>
+<p>Para la configuración del servidor web, debemos crear un archivo en el directorio <code>/etc/nginx/sites-available</code>, y debemos elegir un nombre. Para este ejemplo, se llamará <code>webtest</code> y debe quedar así:</p>
 </li>
-<li>
-<p>Con las herramientas de desarrollador comprobamos que el nuevo header aparece en la respuesta.</p>
-</li>
-<li>
-<p>Luego hacemos lo mismo pero con el archivo del servidor web original. Esta vez el <code>Nombre_del_host</code> será <code>servidor_web_vuestronombre</code>.</p>
-</li>
-</ol>
-<p>Si todo está bien, ahora deberían aparecer los dos.</p>
-<p><img alt="Foto 14" src="../assets/images/practica%202.3/s14.png" /></p>
+</ul>
+<pre><code>/etc/nginx/sites-available/webtest
+
+server {
+    listen 8080;
+    server_name webtest.local;
+
+    location / {
+        root /var/www/webtest/html;
+        index index.html;
+
+        add_header webtest_lara webtest;
+    }
+}
+</code></pre>
+<ul>
+<li>Tras tener configurado el archivo, creamos el enlace:</li>
+</ul>
+<pre><code>sudo ln -s /etc/nginx/sites-available/webtest /etc/nginx/sites-enabled/
+</code></pre>
+<ul>
+<li>Y lo reiniciamos:</li>
+</ul>
+<pre><code>sudo systemctl restart nginx
+</code></pre>
+<ul>
+<li>Para la configuración del servidor clonado, solo se tiene que clonar el servidor anterior, pero cambiando el antiguo <code>server_name</code> para que no haya errores.</li>
+</ul>
+<pre><code>/etc/nginx/sites-available/webtest
+
+server {
+    listen 8080;
+    server_name webtest2.local;
+
+    location / {
+        root /var/www/webtest/html;
+        index index.html;
+
+        add_header webtest2_lara webtest;
+    }
+}
+</code></pre>
+<ul>
+<li>Para la configuración del proxy, lo haremos igual que en la práctica en sí. Creamos un archivo que debería llevar esta configuración:</li>
+</ul>
+<pre><code>/etc/nginx/sites-available/webtest-proxy
+
+    upstream webtest {
+                random;
+                server webtest.local:8080;
+                server webtest2.local:8080;
+    }
+            server {
+                listen 80;
+                server_name webtest.local;      
+                location / {
+                    proxy_pass http://webtest;
+                }
+            }
+</code></pre>
+<ul>
+<li>No se debe olvidar el crear los enlaces pertinentes con el comando de siempre:</li>
+</ul>
+<pre><code>sudo ln -s /etc/nginx/sites-available/webtest-proxy /etc/nginx/sites-enabled/
+</code></pre>
+<ul>
+<li>Por último, se reinicia de nuevo:</li>
+</ul>
+<pre><code>sudo systemctl restart nginx
+</code></pre>
+<ul>
+<li>Como último paso, añadimos al archivo hosts de nuestro pc la IP del proxy para poder probarlo, en Windows, la localización sería:</li>
+</ul>
+<pre><code>C:\Windows\System32\drivers\etc\hosts
+
+...
+ip-proxy webtest.local
+</code></pre>
+<ul>
+<li>En Linux, la localización estaría en:</li>
+</ul>
+<pre><code>/etc/hosts
+
+...
+ip-proxy webtest.local
+</code></pre>
 
 
 
