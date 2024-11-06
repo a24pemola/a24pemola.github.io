@@ -631,7 +631,7 @@
 <p><code>/etc/nginx/ssl</code></p>
 <p><img alt="Foto 1" src="../assets/images/practica%202.5/s1.png" /></p>
 <p>Luego, podemos crear el certificado con un único comando:</p>
-<p><code>sudo openssl rew -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/nginx/ssl/server.key -out /etc/nginx/ssl/server.crt</code></p>
+<p><code>sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/nginx/ssl/server.key -out /etc/nginx/ssl/server.crt</code></p>
 <p><img alt="Foto 2" src="../assets/images/practica%202.5/s2.png" /></p>
 <p>Nos preguntará el introducir una serie de parámetros. Se deben introducir los parámetros de la siguiente imagen, a excepción del “Organizational Unit Name”. Ahí deberéis poner <code>2DAW – DEAW - Vuestronombre</code>.</p>
 <p><img alt="Foto 3" src="../assets/images/practica%202.5/s3.png" /></p>
