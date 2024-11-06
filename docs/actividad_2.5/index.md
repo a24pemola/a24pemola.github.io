@@ -19,7 +19,7 @@ En primer lugar, tenemos que crear el sguiente directorio:
 
 Luego, podemos crear el certificado con un único comando:
 
-`sudo openssl rew -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/nginx/ssl/server.key -out /etc/nginx/ssl/server.crt`
+`sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/nginx/ssl/server.key -out /etc/nginx/ssl/server.crt`
 
 ![Foto 2](../assets/images/practica%202.5/s2.png)
 
