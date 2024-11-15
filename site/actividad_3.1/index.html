@@ -662,29 +662,20 @@
 </code></pre>
 <h2 id="despliegue">Despliegue</h2>
 <p>Teniendo ya todo listo para realizar despliegues, ahora crearemos una aplicación Java de prueba para ver si podemos desplegarla sobre la arquitectura que hemos montado. Para ello utilizamos el comando:</p>
-<pre><code> mvn archetype:generate -DgroupId=lara -DartifactId=war-deploy -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
- ```
-
- Tras generar esta aplicación, usaremos un comando final para desplegar y comprobar que se ha buildeado correctamente:
-
- ```
- sudo mvn tomcat7:deploy
- ```
-
-![Foto 6](../assets/images/practica%203.1/s6.png)
-
-Y, accediendo a través de la GUI, debemos ver que la aplicación está desplegado y que podemos acceder a ella perfectamente:
-
-![Foto 7](../assets/images/practica%203.1/s7.png)
-
-![Foto 8](../assets/images/practica%203.1/s8.png)
-
-# Cuestiones
-
+<pre><code>mvn archetype:generate -DgroupId=lara -DartifactId=war-deploy -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
 </code></pre>
-<p>Habéis visto que los archivos de configuración que hemos tocado contienen contraseñas en texto plano, por lo que cualquiera con acceso a ellos obtendría las credenciales de nuestras herramientas.</p>
-<p>En principio esto representa un gran riesgo de seguridad, ¿sabrías razonar o averigüar por qué esto está diseñado de esta forma?
-```</p>
+<p>Tras generar esta aplicación, usaremos un comando final para desplegar y comprobar que se ha buildeado correctamente:</p>
+<pre><code>sudo mvn tomcat7:deploy
+</code></pre>
+<p><img alt="Foto 6" src="../assets/images/practica%203.1/s6.png" /></p>
+<p>Y, accediendo a través de la GUI, debemos ver que la aplicación está desplegado y que podemos acceder a ella perfectamente:</p>
+<p><img alt="Foto 7" src="../assets/images/practica%203.1/s7.png" /></p>
+<p><img alt="Foto 8" src="../assets/images/practica%203.1/s8.png" /></p>
+<h1 id="cuestiones">Cuestiones</h1>
+<pre><code>Habéis visto que los archivos de configuración que hemos tocado contienen contraseñas en texto plano, por lo que cualquiera con acceso a ellos obtendría las credenciales de nuestras herramientas.
+
+En principio esto representa un gran riesgo de seguridad, ¿sabrías razonar o averigüar por qué esto está diseñado de esta forma?
+</code></pre>
 <p>Se espera que, al instalar Tomcat, solo root y el usuario que lo ejecuta puedan acceder a esos archivos, para proteger las contraseñas, igual que pasa con el archivo /etc/shadow, que solo los administradores pueden ver.</p>
 
 

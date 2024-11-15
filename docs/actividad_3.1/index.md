@@ -103,15 +103,14 @@ Este es el bloque a añadir:
 Teniendo ya todo listo para realizar despliegues, ahora crearemos una aplicación Java de prueba para ver si podemos desplegarla sobre la arquitectura que hemos montado. Para ello utilizamos el comando:
 
 ```
- mvn archetype:generate -DgroupId=lara -DartifactId=war-deploy -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
- ```
+mvn archetype:generate -DgroupId=lara -DartifactId=war-deploy -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+```
 
- Tras generar esta aplicación, usaremos un comando final para desplegar y comprobar que se ha buildeado correctamente:
+Tras generar esta aplicación, usaremos un comando final para desplegar y comprobar que se ha buildeado correctamente:
 
- ```
- sudo mvn tomcat7:deploy
- ```
-
+```
+sudo mvn tomcat7:deploy
+```
 ![Foto 6](../assets/images/practica%203.1/s6.png)
 
 Y, accediendo a través de la GUI, debemos ver que la aplicación está desplegado y que podemos acceder a ella perfectamente:
