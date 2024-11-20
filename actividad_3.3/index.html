@@ -8,13 +8,11 @@
       
       
       
-        <link rel="canonical" href="https://a24pemola.github.io/actividad_3.2/">
+        <link rel="canonical" href="https://a24pemola.github.io/actividad_3.3/">
       
       
-        <link rel="prev" href="../actividad_3.1/">
+        <link rel="prev" href="../actividad_3.2/">
       
-      
-        <link rel="next" href="../actividad_3.3/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -22,7 +20,7 @@
     
     
       
-        <title>Ejercicio 3.2 - Web de Lara</title>
+        <title>Ejercicio 3.3 - Web de Lara</title>
       
     
     
@@ -64,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#practica-32-despliegue-de-aplicaciones-con-node-express" class="md-skip">
+        <a href="#practica-33-despliegue-de-una-aplicacion-una-aplicacion-react-en-netlify-paas" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ejercicio 3.2
+              Ejercicio 3.3
             
           </span>
         </div>
@@ -373,6 +371,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../actividad_3.2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicio 3.2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -389,7 +408,7 @@
           
   
   <span class="md-ellipsis">
-    Ejercicio 3.2
+    Ejercicio 3.3
   </span>
   
 
@@ -400,7 +419,7 @@
         
   
   <span class="md-ellipsis">
-    Ejercicio 3.2
+    Ejercicio 3.3
   </span>
   
 
@@ -422,38 +441,62 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ojo" class="md-nav__link">
+  <a href="#creacion-de-nuestra-aplicacion" class="md-nav__link">
     <span class="md-ellipsis">
-      ¡OJO!
+      Creación de nuestra aplicación
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#instalacion-de-nodejs-express-y-test-de-la-primera-aplicacion" class="md-nav__link">
+  <a href="#aplicacion-para-netlify" class="md-nav__link">
     <span class="md-ellipsis">
-      Instalación de Node.js, Express y test de la primera aplicación
+      Aplicación para Netlify
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#despliegue-de-una-nueva-aplicacion" class="md-nav__link">
+  <a href="#proceso-de-despliegue-en-netlify" class="md-nav__link">
     <span class="md-ellipsis">
-      Despliegue de una nueva aplicación
+      Proceso de despliegue en Netlify
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cuestiones" class="md-nav__link">
+  <a href="#despliegue-mediante-cli" class="md-nav__link">
     <span class="md-ellipsis">
-      Cuestiones
+      Despliegue mediante CLI
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#despliegue-mediante-conexion-con-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Despliegue mediante conexión con Github
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Despliegue mediante conexión con Github">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comprobacion-de-que-funciona-asi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprobación de que funciona así:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -461,27 +504,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../actividad_3.3/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Ejercicio 3.3
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -521,38 +543,62 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ojo" class="md-nav__link">
+  <a href="#creacion-de-nuestra-aplicacion" class="md-nav__link">
     <span class="md-ellipsis">
-      ¡OJO!
+      Creación de nuestra aplicación
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#instalacion-de-nodejs-express-y-test-de-la-primera-aplicacion" class="md-nav__link">
+  <a href="#aplicacion-para-netlify" class="md-nav__link">
     <span class="md-ellipsis">
-      Instalación de Node.js, Express y test de la primera aplicación
+      Aplicación para Netlify
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#despliegue-de-una-nueva-aplicacion" class="md-nav__link">
+  <a href="#proceso-de-despliegue-en-netlify" class="md-nav__link">
     <span class="md-ellipsis">
-      Despliegue de una nueva aplicación
+      Proceso de despliegue en Netlify
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#cuestiones" class="md-nav__link">
+  <a href="#despliegue-mediante-cli" class="md-nav__link">
     <span class="md-ellipsis">
-      Cuestiones
+      Despliegue mediante CLI
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#despliegue-mediante-conexion-con-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Despliegue mediante conexión con Github
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Despliegue mediante conexión con Github">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comprobacion-de-que-funciona-asi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprobación de que funciona así:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -571,50 +617,201 @@
                   
 
 
-<h1 id="practica-32-despliegue-de-aplicaciones-con-node-express">Practica 3.2 Despliegue de aplicaciones con Node Express</h1>
-<h2 id="ojo">¡OJO!</h2>
-<p>Debemos comprobar que el servidor de Tomcat que hemos instalado anteriormente está desactivado, o dará problemas:</p>
-<p><code>sudo systemctl status tomcat10</code></p>
-<p>Y en caso de que esté activo, se para:</p>
-<p><code>sudo systemctl stop tomcat10</code></p>
-<h2 id="instalacion-de-nodejs-express-y-test-de-la-primera-aplicacion">Instalación de Node.js, Express y test de la primera aplicación</h2>
-<p>Primero, instalaremos Node.js y Express en Debian 11. Luego, crearemos un archivo <code>.js</code> de prueba para asegurarnos de que el despliegue funciona.</p>
-<p>Personalmente he seguido este [tutorial] (https://web.archive.org/web/20240420163631/https://unixcop.com/how-to-install-expressjs-on-debian-11/) para instalar Node.js.</p>
-<p>Para Express, recuerda acceder a <code>http://IP-maq-virtual:3000</code> desde tu máquina local, usando la IP de tu máquina virtual, en lugar de <code>http://localhost:3000</code>.</p>
-<p>Recordad parar el servidor (CTRL+C) al acabar la práctica.</p>
-<p><img alt="Foto 1" src="../assets/images/practica%203.2/s1.png" />
-<img alt="Foto 2" src="../assets/images/practica%203.2/s2.png" /></p>
-<h2 id="despliegue-de-una-nueva-aplicacion">Despliegue de una nueva aplicación</h2>
-<p>Vamos a desplegar una app de terceros como ejemplo. Es un prototipo de predicción meteorológica que está en este repositorio de GitHub.</p>
-<p>Lo primero es clonar el repositorio siguiendo las instrucciones que ahí se indican:</p>
-<pre><code>git clone https://github.com/MehedilslamRipon/Shopping-Cart-Application
+<h1 id="practica-33-despliegue-de-una-aplicacion-una-aplicacion-react-en-netlify-paas">Practica 3.3 Despliegue de una aplicación una aplicación React en Netlify (PaaS)</h1>
+<h2 id="creacion-de-nuestra-aplicacion">Creación de nuestra aplicación</h2>
+<p>Después de iniciar sesión por SSH en nuestro Debian, creamos una carpeta para la aplicación con el nombre que prefiramos. Dentro de esa carpeta, añadimos los 3 archivos necesarios: dos <code>.html</code> y un <code>.js</code> para nuestra sencilla app de ejemplo.</p>
+<p>El directorio se puede crear con el comando <code>mkdir</code> como hemos hecho otras veces, mientras que los archivos en cuestion se pueden crear usando el comando <code>sudo nano head.html</code> por ejemplo.</p>
+<p>head.html</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+        &lt;title&gt;Hola Mundo&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+        &lt;h1&gt;Esta es la pagina principal&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;/tailPage&quot;&gt;Ir a la siguiente pagina&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;/body&gt;
 </code></pre>
-<p>Nos movemos al nuevo directorio:</p>
-<pre><code>cd Shopping-Cart-Application/
+<p><img alt="Foto 1" src="../assets/images/practica%203.3/s1.png" /></p>
+<p>tail.html</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+        &lt;title&gt;Hola Mundo&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+        &lt;h1&gt;FUNCIONA&lt;/h1&gt;
+
+&lt;/body&gt;
 </code></pre>
-<p><img alt="Foto 3" src="../assets/images/practica%203.2/s3.png" /></p>
-<p>Instalamos librerías necesarias:</p>
-<pre><code>npm install
+<p><img alt="Foto 2" src="../assets/images/practica%203.3/s2.png" /></p>
+<p>aplicacion.js</p>
+<pre><code>var http = require('http');
+var fs = require('fs'); // para obtener los datos del archivo html
+var port = process.env.PORT || 8080; 
+
+http.createServer(function (req, res) {
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+
+    // req.url almacena el path o ruta de la URL
+    var url = req.url;
+    if (url === &quot;/&quot;) {
+// fs.readFile busca el archivo HTML
+// el primer parámetro es el path al archivo HTML
+// y el segundo es el callback de la función
+// si el archivo no se encuentra, la función devuelve un error
+// si el archivo se encuentra, el contenido del mismo se encuentra en pgres    
+        fs.readFile(&quot;head.html&quot;, function (err, pgres) {
+            if (err)
+                res.write(&quot;HEAD.HTML NOT FOUND&quot;);
+            else {
+                // Las siguientes 3 lineas
+                // tienen la función de enviar el archivo html
+                // y finalizar el proceso de respuesta
+                res.writeHead(200, { 'Content-Type': 'text/html' });
+                res.write(pgres);
+                res.end();
+            }
+        });
+    }
+    else if (url === &quot;/tailPage&quot;) {
+        fs.readFile(&quot;tail.html&quot;, function (err, pgres) {
+            if (err)
+                res.write(&quot;TAIL.HTML NOT FOUND&quot;);
+            else {
+                res.writeHead(200, { 'Content-Type': 'text/html' });
+                res.write(pgres);
+                res.end();
+            }
+        });
+    }
+
+}).listen(port, function () {
+    console.log(&quot;SERVER STARTED PORT: 8080&quot;);
+});
 </code></pre>
-<p>Y por último la iniciamos:</p>
-<pre><code>npm run start
+<p><img alt="Foto 3" src="../assets/images/practica%203.3/s3.png" /></p>
+<p>A continuación, creamos el archivo <code>package.json</code> con el siguiente comando:</p>
+<p><code>npm init</code></p>
+<p><img alt="Foto 4" src="../assets/images/practica%203.3/s4.png" /></p>
+<p>Y podemos probar si funciona:</p>
+<p><code>node aplicacion.js</code></p>
+<p>Tras hacer eso, deberíamos poder acceder con nuestra máquina anfitriona a <code>http://IP-maq-virtual:8080</code></p>
+<p><img alt="Foto 5" src="../assets/images/practica%203.3/s5.png" />
+<img alt="Foto 6" src="../assets/images/practica%203.3/s6.png" /></p>
+<h2 id="aplicacion-para-netlify">Aplicación para Netlify</h2>
+<p>Utilizaremos una aplicación de ejemplo para esta práctica.</p>
+<p>Simplemente, clonaremos el siguiente repositorio con el comando:</p>
+<p><code>git clone https://github.com/StackAbuse/color-shades-generator</code></p>
+<p><img alt="Foto 7" src="../assets/images/practica%203.3/s7.png" /></p>
+<h2 id="proceso-de-despliegue-en-netlify">Proceso de despliegue en Netlify</h2>
+<p>Veremos dos métodos de despliegue en Netlify, el primero será el despliegue manual desde el CLI de Netlify, y el otro será con conexión a un código publicado en Github.</p>
+<p>Tened en cuenta que debéis haceros una cuenta en <a href="https://www.netlify.com/">Netlify</a>.</p>
+<h2 id="despliegue-mediante-cli">Despliegue mediante CLI</h2>
+<p>Una vez estemos registrados, instalamos el CLI de Netlify:</p>
+<p><code>sudo npm install netlify-cli -g</code></p>
+<p><img alt="Foto 8" src="../assets/images/practica%203.3/s8.png" /></p>
+<p>Pedirá autentificación, lo haremos con el comando:</p>
+<p><code>netlify login</code></p>
+<p>Como estamos conectados por SSH, podemos generar un token desde Netlify, y lo establecemos como variable de ambiente:</p>
+<p><img alt="Foto 9" src="../assets/images/practica%203.3/s9.png" /></p>
+<p><img alt="Foto 10" src="../assets/images/practica%203.3/s10.png" /></p>
+<p>Y ya podremos logearnos con</p>
+<p><code>netlify login</code></p>
+<p>Como buenos desarrolladores, haremos un build de la aplicación para antes de desplegarla.</p>
+<p>Primero debemos instalar las dependencias indicadas en el archivo <code>package.json</code>:</p>
+<p><code>npm install</code></p>
+<p><img alt="Foto 11" src="../assets/images/practica%203.3/s11.png" /></p>
+<p>Y cuando lo tengamos procedemos al build:</p>
+<p><code>npm run build</code></p>
+<p><img alt="Foto 12" src="../assets/images/practica%203.3/s12.png" /></p>
+<p>Esto nos crea la carptea <code>build</code> que contendrá la aplicación a desplegar.</p>
+<p>Haremos un pre-deploy de la app con el siguiente comando:</p>
+<p><code>netlify deploy</code></p>
+<p><img alt="Foto 13" src="../assets/images/practica%203.3/s13.png" /></p>
+<p>Nos hará unas cuantas preguntas para el despliegue:</p>
+<ul>
+<li>
+<p>Indicamos que queremos crear y configurar una nueva site.</p>
+</li>
+<li>
+<p>El Team se deja por defecto.</p>
+</li>
+<li>
+<p>El nombre para la web será <code>nombre-practica3-4</code> y el directorio que utilizaremos será <code>./build</code>.</p>
+</li>
+</ul>
+<p>Si nos indica que todo ha ido bien e incluso podemos ver el "borrador" (Website Draft URL) de la web que nos aporta, podemos pasarla a producción finalmente tal y como nos indica la misma salida del comando:</p>
+<pre><code>If everything looks good on your draft URL, deploy it to your main site URL with the --prod flag.
+netlify deploy --prod
 </code></pre>
-<p>Dará un error de este tipo al intentar arrancar:</p>
-<pre><code>sh: 1: nodemon: not found
+<p><img alt="Foto 14" src="../assets/images/practica%203.3/s14.png" /></p>
+<p>No olvideis desplegar finalmente para poder comprobar que se puede acceder a la URL:</p>
+<p><img alt="Foto 15" src="../assets/images/practica%203.3/s15.png" /></p>
+<h2 id="despliegue-mediante-conexion-con-github">Despliegue mediante conexión con Github</h2>
+<p>primero eliminamos la site que hemos desplegado en Netlify para evitar conflictos:</p>
+<p><img alt="Foto 16" src="../assets/images/practica%203.3/s16.png" /></p>
+<p>Luego borramos el directorio donde hemos clonado el repositorio para empezar de 0:</p>
+<p><code>rm -rf directorio_repositorio</code></p>
+<p>A continuación, descargamos un <code>.zip</code> sin que tenga referencia a Github:</p>
+<p><code>wget https://github.com/StackAbuse/color-shades-generator/archive/refs/heads/main.zip</code></p>
+<p><img alt="Foto 17" src="../assets/images/practica%203.3/s17.png" /></p>
+<p>Y creamos la carpeta nueva para descomprimir el .zip allí:</p>
+<pre><code>mkdir practica3.4
+
+unzip main.zip -d practica3.4/
 </code></pre>
-<p><img alt="Foto 4" src="../assets/images/practica%203.2/s4.png" /></p>
-<p>Para solucionar el problema, instalamos nodemon desde consola y listo.</p>
-<p><img alt="Foto 5" src="../assets/images/practica%203.2/s5.png" />
-<img alt="Foto 6" src="../assets/images/practica%203.2/s6.png" />
-<img alt="Foto 7" src="../assets/images/practica%203.2/s7.png" /></p>
-<h2 id="cuestiones">Cuestiones</h2>
-<p>Cuando ejecutáis el comando npm run start, lo que estáis haciendo es ejecutar un script:</p>
-<pre><code>- ¿Donde podemos ver que script se está ejecutando?
+<p><img alt="Foto 18" src="../assets/images/practica%203.3/s18.png" /></p>
+<p>Ya podemos entrar en la carptea donde está el código:</p>
+<p><code>cd practica3.4/color-shades-generator-main/</code></p>
+<p>Ahora deberemos crear un repositorio completamente vacío en Github que se llame <code>practicaTresCuatro</code>.</p>
+<p>Y tras hacerlo, volvemos a la terminal para iniciar el repositorio que queremos subir:</p>
+<pre><code>$ git init
+$ git add .
+$ git commit -m &quot;Subiendo el código...&quot;
+$ git branch -M main
 </code></pre>
-<p>En el archivo <code>package.json</code>, dentro de la sección <code>"scripts"</code>. Ahí se define qué hace el comando <code>npm run start</code>.</p>
-<pre><code>- ¿Qué comando está ejecutando?
+<p><img alt="Foto 19" src="../assets/images/practica%203.3/s19.png" /></p>
+<p>Y ya solo queda hacer referencia al recién creado Github para hacer un <code>push</code>:</p>
+<pre><code>$ git remote add origin https://github.com/username/practicaTresCuatro.git
+$ git push -u origin main
 </code></pre>
-<p>Depende de lo que esté configurado en <code>"start"</code> en el <code>package.json</code>. Por ejemplo, podría ser algo como node <code>server.js</code>, <code>nodemon app.js</code>, o cualquier otro comando que se especifique en esa línea.</p>
+<p><img alt="Foto 20" src="../assets/images/practica%203.3/s20.png" /></p>
+<p>Con el código subido a Github, ahora lo que tenemos que hacer es vincular nuestra cuenta de Github con Netlify. Al hacerlo, pedirá permisos y nosotros lo autorizaremos, pero un detalle a tener en cuenta es que cuando pregunte sobre qué repositorios instalar, solo elegimos el que hemos hecho para la práctica.</p>
+<p><img alt="Foto 21" src="../assets/images/practica%203.3/s21.png" /></p>
+<p>Y ya lo tendremos todo listo.</p>
+<p><img alt="Foto 22" src="../assets/images/practica%203.3/s22.png" /></p>
+<p>Luego estaremos listos para desplegar la aplicación.</p>
+<p><img alt="Foto 23" src="../assets/images/practica%203.3/s23.png" /></p>
+<p>Netlify se encargará de hacer el <code>build</code> de forma automática tal y como hemos visto en la imagen de arriba, con el comando <code>npm run build</code>, publicando el contenido del directorio <code>build</code>.</p>
+<p>Con esta conexión, cualquier cambio que hagamos en el proyecto y al que le hagamos un <code>commit</code> y <code>push</code> desde Github, se actualizará automaticamente en Netlify.</p>
+<h3 id="comprobacion-de-que-funciona-asi">Comprobación de que funciona así:</h3>
+<ul>
+<li>Dentro de la carpeta <code>public</code> existe el archivo <code>robots.txt</code>, que indica a los rastreadores de los buscadores qué URLs pueden acceder. Se puede acceder a través de la site en sí.</li>
+</ul>
+<p><img alt="Foto 24" src="../assets/images/practica%203.3/s24.png" /></p>
+<ul>
+<li>Lo que vamos a hacer es acceder la carpeta <code>public</code> donde se encuentra el archivo <code>robots.txt</code> para modificarlo, añadiendo <code>nombre_apellido</code> en la sección de Disallow.</li>
+</ul>
+<p><img alt="Foto 25" src="../assets/images/practica%203.3/s25.png" /></p>
+<ul>
+<li>
+<p>Haremos un nuevo <code>commit</code> y <code>push</code> tal y como lo hemos hecho antes.</p>
+</li>
+<li>
+<p>Y comprobaremos que tanto en la consola como en Netlify hay un nuevo deploy de la app.</p>
+</li>
+</ul>
+<p><img alt="Foto 26" src="../assets/images/practica%203.3/s26.png" /></p>
+<p><img alt="Foto 27" src="../assets/images/practica%203.3/s27.png" /></p>
+<ul>
+<li>Por último, accedemos a la url <code>https://url_de_la_aplicacion/robots.txt</code> y comprobamos que el cambio se ha reflejado.</li>
+</ul>
+<p><img alt="Foto 28" src="../assets/images/practica%203.3/s28.png" /></p>
 
 
 
