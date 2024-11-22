@@ -1,0 +1,985 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://a24pemola.github.io/actividad_3.4/">
+      
+      
+        <link rel="prev" href="../actividad_3.3/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.38">
+    
+    
+      
+        <title>Ejercicio 3.4 - Web de Lara</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#practica-34-despliegue-de-una-aplicacion-flask-python" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Web de Lara" class="md-header__button md-logo" aria-label="Web de Lara" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Web de Lara
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Ejercicio 3.4
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Web de Lara" class="md-nav__button md-logo" aria-label="Web de Lara" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Web de Lara
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DAW
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            DAW
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UD2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            UD2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actividad_2.1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicio 2.1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actividad_2.2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicio 2.2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actividad_2.3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicio 2.3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actividad_2.4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicio 2.4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actividad_2.5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicio 2.5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actividad_3.1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicio 3.1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UD3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            UD3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actividad_3.2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicio 3.2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actividad_3.3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicio 3.3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Ejercicio 3.4
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicio 3.4
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#procedimiento-completo-para-el-despliegue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procedimiento completo para el despliegue
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comprobacion-de-gunicorn" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprobación de Gunicorn
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mismo-proceso-con-un-repositorio-de-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mismo proceso con un repositorio de Git
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comprobaacion-de-gunicorn-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprobaación de Gunicorn 2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuestiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cuestiones
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#procedimiento-completo-para-el-despliegue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procedimiento completo para el despliegue
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comprobacion-de-gunicorn" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprobación de Gunicorn
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mismo-proceso-con-un-repositorio-de-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mismo proceso con un repositorio de Git
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comprobaacion-de-gunicorn-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprobaación de Gunicorn 2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuestiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cuestiones
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="practica-34-despliegue-de-una-aplicacion-flask-python">Practica 3.4 Despliegue de una aplicación Flask (Python)</h1>
+<h2 id="procedimiento-completo-para-el-despliegue">Procedimiento completo para el despliegue</h2>
+<p>Primero instalamos el gestor de paquetes de Python pip:</p>
+<p><code>sudo apt update</code></p>
+<p><code>sudo apt install python3-pip</code></p>
+<p><img alt="Foto 1" src="../assets/images/practica%203.4/s1.png" /></p>
+<p>Luego instalamos el paquete <code>pipenv</code> para gestionar los entornos virtuales:</p>
+<p><code>sudo apt install pipenv</code></p>
+<p><img alt="Foto 2" src="../assets/images/practica%203.4/s2.png" /></p>
+<p>Y comprobamos que está instalado correctamente mostrando su versión:</p>
+<p><code>pipenv --version</code></p>
+<p><img alt="Foto 3" src="../assets/images/practica%203.4/s3.png" /></p>
+<p>Creamos el directorio en el que almacenaremos nuestro proyecto:</p>
+<p><code>sudo mkdir /var/www/nombre_mi_aplicacion</code></p>
+<p>Cuando lo creamos con <code>sudo</code>, los permisos pertenecerán a root, por lo que debemos cambiarlos para darle los permisos a nuestro usuario (<code>lara</code> en mi caso), y que pertenezca al grupo <code>www-data</code>, con los siguientes comandos:</p>
+<p><code>sudo chown -R $USER:www-data /var/www/mi_aplicacion</code></p>
+<p><code>chmod -R 775 /var/www/mi_aplicacion</code></p>
+<p><img alt="Foto 4" src="../assets/images/practica%203.4/s4.png" /></p>
+<pre><code>Es indispensable que asignemos los permisos para que no haya errores.
+</code></pre>
+<p>A continuación, dentro del directorio de nuestra aplicación, creamos un archivo oculto <code>.env</code> que contendrá las variables necesarias:</p>
+<p><code>touch .env</code></p>
+<p><img alt="Foto 5" src="../assets/images/practica%203.4/s5.png" /></p>
+<p>Editamos el archivo y añadimos las variables, indicando cuál es el archivo <code>.py</code> de la aplicación y el entorno, que en nuestro caso será producción:</p>
+<p><img alt="Foto 6" src="../assets/images/practica%203.4/s6.png" /></p>
+<p>Ahora vamos ya a iniciar nuestro entorno virtual con el siguiente comando:</p>
+<p><code>pipenv shell</code></p>
+<p>Si todo va bien, el nombre del entorno virtual debe salir antes del nombre y ruta en consola:</p>
+<p><img alt="Foto 7" src="../assets/images/practica%203.4/s7.png" /></p>
+<p>Desde dentro del entorno virtual, instalamos las dependencias necesarias para el proyecto:</p>
+<p><code>pipenv install flask gunicorn</code></p>
+<p><img alt="Foto 8" src="../assets/images/practica%203.4/s8.png" /></p>
+<p>El archivo que contendrá la aplicación propiamente dicha será <code>application.py</code>, y <code>wsgi.py</code> se encargará únicamente de iniciarla y dejarla corriendo:</p>
+<p><code>touch application.py wsgi.py</code></p>
+<p>Una vez creamos los archivos, debemos editarlos para dejarlos así:</p>
+<p><img alt="Foto 9" src="../assets/images/practica%203.4/s9.png" /></p>
+<p><img alt="Foto 10" src="../assets/images/practica%203.4/s10.png" /></p>
+<p>Con el servidor web integrado de Flask, vamos a correr la aplicación para comprobar que todo funciona bien. Especificaremos la dirección 0.0.0.0:</p>
+<p><img alt="Foto 11" src="../assets/images/practica%203.4/s11.png" /></p>
+<p>Si intentamos entrar en la url, debería funcionarnos. Recordad ponerlo de manera que <code>http://IP-maq-virtual:5000</code></p>
+<p><img alt="Foto 12" src="../assets/images/practica%203.4/s12.png" /></p>
+<p>¡Y voilá! Una vez lo hemos comprobado, paramos el servidor con <code>CTRL+C</code>.</p>
+<h2 id="comprobacion-de-gunicorn">Comprobación de Gunicorn</h2>
+<p>Si Flask ha funcionado bien, usando el siguiente comando nos dirá si Gunicorn funciona:</p>
+<p><code>gunicorn --workers 4 --bind 0.0.0.0:5000 wsgi:app</code></p>
+<p><img alt="Foto 13" src="../assets/images/practica%203.4/s13.png" /></p>
+<p>Todavía en el entorno virtual, vamos a tomar nota del path desde la que se ejecuta <code>gunicorn</code>, la vamos a necesitar para más adelante:</p>
+<p><img alt="Foto 14" src="../assets/images/practica%203.4/s14.png" /></p>
+<p>Como ya tendríamos que tener Nginx instalado en nuestro sistema por practicas anteriores, lo iniciamos y comprobamos su estado:</p>
+<pre><code>sudo systemctl start nginx
+
+sudo systemctl status nginx
+</code></pre>
+<p><img alt="Foto 15" src="../assets/images/practica%203.4/s15.png" /></p>
+<p>Ya fuera del entorno virtual, creamos un archivo para systemd, para que corra Gunicorn como un servicio más:</p>
+<p><img alt="Foto 16" src="../assets/images/practica%203.4/s16.png" /></p>
+<p>Tened en cuenta que:</p>
+<ul>
+<li>
+<p><code>User</code>: Será nuestro usuario.</p>
+</li>
+<li>
+<p><code>Group</code>: Pondremos <code>www-data</code></p>
+</li>
+<li>
+<p><code>Environment</code>: Establecemos el directorio <code>bin</code>. La ruta que guardamos antes pero sin el 'gunicorn'.</p>
+</li>
+<li>
+<p><code>WorkingDirectory</code>: El directorio donde tenemos el proyecto.</p>
+</li>
+<li>
+<p><code>ExecStart</code>: La ruta que guardamos antes para Gunicorn, completa.</p>
+</li>
+</ul>
+<p>Una vez configurado eso, habilitamos el servicio:</p>
+<pre><code>systemctl enable nombre_mi_servicio
+
+systemctl start nombre_mi_servicio
+</code></pre>
+<p><img alt="Foto 17" src="../assets/images/practica%203.4/s17.png" /></p>
+<p>El nombre del servicio es el nombre del archivo que creamos antes.</p>
+<p>Ahora deberemos configurar Nginx, yendo a la ruta de <code>/etc/nginx/sites-available/nombre_aplicacion</code>:</p>
+<pre><code>server {
+    listen 80;
+    server_name mi_aplicacion www.mi_aplicacion; 
+
+
+
+    access_log /var/log/nginx/mi_aplicacion.access.log; 
+
+
+    error_log /var/log/nginx/mi_aplicacion.error.log;
+
+    location / { 
+            include proxy_params;
+            proxy_pass http://unix:/var/www/nombre_aplicacion/nombre_aplicacion.sock; 
+
+
+    }
+}   
+</code></pre>
+<p><img alt="Foto 18" src="../assets/images/practica%203.4/s18.png" /></p>
+<p>Recordemos que ahora debemos crear un link simbólico del archivo de sitios webs disponibles al de sitios web activos:</p>
+<p><code>sudo ln -s /etc/nginx/sites-available/nombre_aplicacion /etc/nginx/sites-enabled/</code></p>
+<p>Y nos aseguramos de que se ha creado dicho link simbólico:</p>
+<p><code>ls -l /etc/nginx/sites-enabled/ | grep nombre_aplicacion</code></p>
+<p><img alt="Foto 19" src="../assets/images/practica%203.4/s19.png" /></p>
+<p>Como siempre, comprobamos que no haya errores y reiniciamos Nginx:</p>
+<pre><code>nginx -t
+
+sudo systemctl restart nginx
+
+sudo systemctl status nginx
+</code></pre>
+<p>Como ya no podemos acceder por IP ya que la app está siendo servida por Gunicorn y Nginx, accedemos por el <code>server_name</code>.</p>
+<p>Debemos editar el archivo <code>hosts</code> de la máquina anfitriona para añadir la IP de la máquina virtual y el nombre del proyecto:</p>
+<p><img alt="Foto 20" src="../assets/images/practica%203.4/s20.png" /></p>
+<p>Este archivo, en Linux, está en: <code>/etc/hosts</code></p>
+<p>Y en Windows: <code>C:\Windows\System32\drivers\etc\hosts</code></p>
+<p>Ya guardado el archivo <code>hosts</code>, intentamos acceder a la web a través de <code>http://nombre_aplicacion</code> o <code>http://www.nombre_aplicacion</code>:</p>
+<p><img alt="Foto 21" src="../assets/images/practica%203.4/s21.png" /></p>
+<p><img alt="Foto 22" src="../assets/images/practica%203.4/s22.png" /></p>
+<h2 id="mismo-proceso-con-un-repositorio-de-git">Mismo proceso con un repositorio de Git</h2>
+<p>Primero, comenzamos con clonar el repositorio en cuestión:</p>
+<p><code>git clone https://github.com/raul-profesor/Practica-3.5</code></p>
+<p><img alt="Foto 23" src="../assets/images/practica%203.4/s23.png" /></p>
+<p>Lo siguiente que debemos hacer es dar los permisos necesarios a nuestra aplicación, tal y como hicimos anteriormente, con los comandos, y siempre teniendo en cuenta que esta vez el nombre de la aplicación es diferente:</p>
+<pre><code>sudo chown -R $USER:www-data /var/www/mi_aplicacion
+
+chmod -R 775 /var/www/mi_aplicacion   
+</code></pre>
+<p><img alt="Foto 24" src="../assets/images/practica%203.4/s24.png" /></p>
+<p>Dentro del directorio de la app, creamos el archivo oculto <code>.env</code> para la creación de otro entorno virtual:</p>
+<p><code>touch .env</code></p>
+<p>Y editamos el archivo para que quede así:</p>
+<p><img alt="Foto 25" src="../assets/images/practica%203.4/s25.png" /></p>
+<p>Lanzamos el entorno virtual:</p>
+<p><code>pipenv shell</code></p>
+<p><img alt="Foto 26" src="../assets/images/practica%203.4/s26.png" /></p>
+<p>E instalamos las dependencias correspondientes:</p>
+<p><code>pipenv install -r requirements.txt</code></p>
+<p><code>pipenv install flask gunicorn</code></p>
+<p><img alt="Foto 27" src="../assets/images/practica%203.4/s27.png" /></p>
+<p><img alt="Foto 28" src="../assets/images/practica%203.4/s28.png" /></p>
+<p>Creamos el archivo <code>wsgi.py</code> solo ya que el otro no hace falta al existir ya uno:</p>
+<p><code>touch wsgi.py</code></p>
+<p>Y lo editamos para dejarlo así:</p>
+<p><img alt="Foto 29" src="../assets/images/practica%203.4/s29.png" /></p>
+<p>Ya creado y guardado, probamos que lo corre, usando la dirección <code>0.0.0.0</code> como la otra vez:</p>
+<p><code>flask run --host '0.0.0.0'</code></p>
+<p>Y al entrar en la url <code>http://IP-maq-virtual:5000</code> debería verse lo siguiente:</p>
+<p><img alt="Foto 30" src="../assets/images/practica%203.4/s30.png" /></p>
+<h2 id="comprobaacion-de-gunicorn-2">Comprobaación de Gunicorn 2</h2>
+<p>Si Flask ha funcionado bien, usando el siguiente comando nos dirá si Gunicorn funciona:</p>
+<p><code>gunicorn --workers 4 --bind 0.0.0.0:5000 wsgi:app</code></p>
+<p><img alt="Foto 31" src="../assets/images/practica%203.4/s31.png" /></p>
+<p>Todavía en el entorno virtual, vamos a tomar nota del path desde la que se ejecuta <code>gunicorn</code>, la vamos a necesitar para más adelante:</p>
+<p><img alt="Foto 32" src="../assets/images/practica%203.4/s32.png" /></p>
+<p>Como ya tendríamos que tener Nginx instalado en nuestro sistema por practicas anteriores, lo iniciamos y comprobamos su estado:</p>
+<pre><code>sudo systemctl start nginx
+
+sudo systemctl status nginx
+</code></pre>
+<p>Ya fuera del entorno virtual, creamos un archivo para systemd, para que corra Gunicorn como un servicio más:</p>
+<p><img alt="Foto 33" src="../assets/images/practica%203.4/s33.png" /></p>
+<p>Tened en cuenta que:</p>
+<ul>
+<li>
+<p><code>User</code>: Será nuestro usuario.</p>
+</li>
+<li>
+<p><code>Group</code>: Pondremos <code>www-data</code></p>
+</li>
+<li>
+<p><code>Environment</code>: Establecemos el directorio <code>bin</code>. La ruta que guardamos antes pero sin el 'gunicorn'.</p>
+</li>
+<li>
+<p><code>WorkingDirectory</code>: El directorio donde tenemos el proyecto.</p>
+</li>
+<li>
+<p><code>ExecStart</code>: La ruta que guardamos antes para Gunicorn, completa.</p>
+</li>
+</ul>
+<p>Una vez configurado eso, habilitamos el servicio:</p>
+<pre><code>systemctl enable nombre_mi_servicio
+
+systemctl start nombre_mi_servicio
+</code></pre>
+<p><img alt="Foto 34" src="../assets/images/practica%203.4/s34.png" /></p>
+<p>El nombre del servicio es el nombre del archivo que creamos antes.</p>
+<p>Ahora deberemos configurar Nginx, yendo a la ruta de <code>/etc/nginx/sites-available/nombre_aplicacion</code>:</p>
+<pre><code>server {
+    listen 80;
+    server_name mi_aplicacion www.mi_aplicacion; 
+
+
+
+    access_log /var/log/nginx/mi_aplicacion.access.log; 
+
+
+    error_log /var/log/nginx/mi_aplicacion.error.log;
+
+    location / { 
+            include proxy_params;
+            proxy_pass http://unix:/var/www/nombre_aplicacion/nombre_aplicacion.sock; 
+
+
+    }
+}   
+</code></pre>
+<p><img alt="Foto 35" src="../assets/images/practica%203.4/s35.png" /></p>
+<p>Recordemos que ahora debemos crear un link simbólico del archivo de sitios webs disponibles al de sitios web activos:</p>
+<p><code>sudo ln -s /etc/nginx/sites-available/nombre_aplicacion /etc/nginx/sites-enabled/</code></p>
+<p>Y nos aseguramos de que se ha creado dicho link simbólico:</p>
+<p><code>ls -l /etc/nginx/sites-enabled/ | grep nombre_aplicacion</code></p>
+<p>Como siempre, comprobamos que no haya errores y reiniciamos Nginx:</p>
+<pre><code>nginx -t
+
+sudo systemctl restart nginx
+
+sudo systemctl status nginx
+</code></pre>
+<p>Como ya no podemos acceder por IP ya que la app está siendo servida por Gunicorn y Nginx, accedemos por el <code>server_name</code>.</p>
+<p>Debemos editar el archivo <code>hosts</code> de la máquina anfitriona para añadir la IP de la máquina virtual y el nombre del proyecto:</p>
+<p><img alt="Foto 36" src="../assets/images/practica%203.4/s36.png" /></p>
+<p>Este archivo, en Linux, está en: <code>/etc/hosts</code></p>
+<p>Y en Windows: <code>C:\Windows\System32\drivers\etc\hosts</code></p>
+<p>Ya guardado el archivo <code>hosts</code>, intentamos acceder a la web a través de <code>http://nombre_aplicacion</code> o <code>http://www.nombre_aplicacion</code>:</p>
+<p><img alt="Foto 37" src="../assets/images/practica%203.4/s37.png" /></p>
+<h2 id="cuestiones">Cuestiones</h2>
+<pre><code>Busca, lee, entiende y explica qué es y para que sirve un servidor WSGI.
+</code></pre>
+<p>Un servidor WSGI es como el intermediario que traduce entre un servidor web (como Nginx o Apache) y una aplicación web hecha en Python (por ejemplo, Flask o Django). Recibe las solicitudes del navegador, las convierte en algo que la aplicación entiende, y luego toma la respuesta de la aplicación y se la devuelve al cliente en un formato listo para la web. Este estándar hace que cualquier servidor WSGI pueda trabajar con cualquier aplicación Python compatible, facilitando el despliegue en producción, especialmente con herramientas como Gunicorn o uWSGI, que manejan múltiples solicitudes al mismo tiempo para maximizar el rendimiento.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+    
+  </body>
+</html>
